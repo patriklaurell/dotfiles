@@ -50,8 +50,8 @@ fi
 
 export browser=firefox
 
-exec i3
-xset -b
+xrandr --output DP-1 --auto --left-of HDMI-2
 
-# Set background image
-feh --bg-center .backgroundimages/zen.jpg
+setxkbmap -option "ctrl:nocaps";
+
+exec dwm

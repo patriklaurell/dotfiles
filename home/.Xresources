@@ -1,4 +1,4 @@
 URxvt.scrollBar: false
 URxvt.background: #000000
-URxvt.foreground: #ededed 
+URxvt.foreground: #ededed
 URxvt.font: xft:mono:size=9

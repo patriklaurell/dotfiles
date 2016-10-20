@@ -1,7 +1,6 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-expand-region'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -9,16 +8,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'terryma/vim-multiple-cursors'
 
 " Colorschemes and syntax tools
-Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'raimondi/delimitmate'
 Plug 'yggdroot/indentline'
 Plug 'benekastah/neomake' " consider trying out syntastic instead
-Plug 'endel/vim-github-colorscheme'
 
 " Languages
 Plug 'pangloss/vim-javascript'

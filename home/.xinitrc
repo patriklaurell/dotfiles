@@ -53,5 +53,6 @@ export browser=firefox
 xrandr --output DP-1 --auto --left-of HDMI-2
 
 setxkbmap -option "ctrl:nocaps";
+xsetroot -name "$(date +"%F %R")"
 
 exec dwm

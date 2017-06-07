@@ -85,11 +85,11 @@ endif
 " Key bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Map <C-Space> to <Esc> in insert and visual mode.
-imap ;; <Esc>
-vmap ;; <Esc>
+imap <NUL> <Esc>
+vmap <NUL> <Esc>
 
 " Map <C-Space> to save file in normal mode.
-nmap ;; :w<CR>
+nmap <NUL> :w<CR>
 
 " Handel wrapped lines as line breaks when navigating
 map j gj

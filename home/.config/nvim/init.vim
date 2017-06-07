@@ -21,9 +21,12 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'digitaltoad/vim-pug'
 Plug 'rust-lang/rust.vim'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Frameworks
 Plug 'posva/vim-vue'
+
+
 
 call plug#end()
 

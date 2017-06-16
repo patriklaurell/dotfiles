@@ -65,6 +65,9 @@ set winminwidth=10
 set winminheight=5
 set winheight=30
 
+" Toggle paste mode with <F2>
+set pastetoggle=<F2>
+
 " Workaround to get <C-w>h to work for switching window in tmux.
 " See https://github.com/neovim/neovim/issues/2048 for details
 if has('nvim')

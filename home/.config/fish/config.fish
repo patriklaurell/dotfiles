@@ -1,5 +1,9 @@
 alias redwm "cd ~/dwm; make; sudo make install; make clean; killall dwm;"
 alias s "systemctl suspend"
+alias md "mkdir"
+alias rd "rmdir"
+alias xc "xclip -selection clipboard"
+alias xp "xclip -o -selection clipboard"
 
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -21,4 +25,8 @@ function fish_prompt
         set_color normal
         printf '%s ' (__fish_git_prompt)
         set_color normal
+end
+
+function !!
+  eval $history[1]
 end

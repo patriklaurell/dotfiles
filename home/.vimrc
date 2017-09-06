@@ -21,12 +21,9 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'digitaltoad/vim-pug'
 Plug 'rust-lang/rust.vim'
-Plug 'JuliaEditorSupport/julia-vim'
 
 " Frameworks
 Plug 'posva/vim-vue'
-
-
 
 call plug#end()
 
@@ -44,8 +41,8 @@ set hidden
 
 " Set indentation without hard tabs 
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -68,6 +65,9 @@ set winminwidth=10
 set winminheight=5
 set winheight=30
 
+" Toggle paste mode with <F2>
+set pastetoggle=<F2>
+
 " Workaround to get <C-w>h to work for switching window in tmux.
 " See https://github.com/neovim/neovim/issues/2048 for details
 if has('nvim')
@@ -88,11 +88,11 @@ endif
 " Key bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Map <C-Space> to <Esc> in insert and visual mode.
-imap ;; <Esc>
-vmap ;; <Esc>
+imap <NUL> <Esc>
+vmap <NUL> <Esc>
 
 " Map <C-Space> to save file in normal mode.
-nmap ;; :w<CR>
+nmap <NUL> :w<CR>
 
 " Handel wrapped lines as line breaks when navigating
 map j gj
@@ -131,7 +131,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
-
 
 
 " Keep visual selection selected after indenting/unindenting

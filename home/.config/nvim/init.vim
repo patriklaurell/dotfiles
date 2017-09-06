@@ -41,8 +41,8 @@ set hidden
 
 " Set indentation without hard tabs 
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -128,6 +128,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
+
 
 
 " Keep visual selection selected after indenting/unindenting

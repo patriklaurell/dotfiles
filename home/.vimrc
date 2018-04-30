@@ -21,6 +21,7 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'digitaltoad/vim-pug'
 Plug 'rust-lang/rust.vim'
+Plug 'sudar/vim-arduino-syntax'
 
 " Frameworks
 Plug 'posva/vim-vue'
@@ -67,6 +68,9 @@ set winheight=30
 
 " Toggle paste mode with <F2>
 set pastetoggle=<F2>
+
+" Set shell to tmux inside vim to avoid bugs with vim-tmux-navigator
+set shell=/bin/bash
 
 " Workaround to get <C-w>h to work for switching window in tmux.
 " See https://github.com/neovim/neovim/issues/2048 for details

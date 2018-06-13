@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'prettier/vim-prettier'
 
 " Colorschemes and syntax tools
 Plug 'tomasr/molokai'
@@ -33,6 +34,9 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Set space as leader
 let mapleader = "\<Space>"
+
+syntax on
+filetype indent plugin on
 
 " Enable line numbering
 set number
@@ -170,4 +174,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
-
+" ~~~~~~~ Prettier ~~~~~~~
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync

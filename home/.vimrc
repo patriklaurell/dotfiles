@@ -5,7 +5,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdcommenter'
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'prettier/vim-prettier'
@@ -24,8 +24,12 @@ Plug 'digitaltoad/vim-pug'
 Plug 'rust-lang/rust.vim'
 Plug 'sudar/vim-arduino-syntax'
 
+Plug 'shougo/context_filetype.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'thinca/vim-quickrun'
+Plug 'osyo-manga/vim-precious'
+
 " Frameworks
-Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -37,6 +41,9 @@ let mapleader = "\<Space>"
 
 syntax on
 filetype indent plugin on
+
+" Normal backspace behavior
+set backspace=indent,eol,start
 
 " Enable line numbering
 set number
@@ -177,3 +184,6 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 " ~~~~~~~ Prettier ~~~~~~~
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
+" ~~~~~~~ Indentline ~~~~~~~
+let g:indentLine_char = '┆'

@@ -2,6 +2,7 @@
 *.swp
 .vim/.netrwhist
 .vim/plugged
+.vim/autoload/plug.vim
 
 # Ignore the backup dir
 backup/

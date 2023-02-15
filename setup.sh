@@ -97,6 +97,22 @@ if [ ! -d ~/.oh-my-zsh ]; then
     fi
 fi
 
+# Install zsh-autosuggestions if it doesn't exit$
+if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+    echo -ne "Installing zsh-autosuggestions..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+fi
+
+# Install pyenv if it doesn't exist
+if [ ! -d ~/.pyenv ]; then
+    echo -ne "Pyenv not found, would you like to install it? (y/n): "
+    read prompt
+    if [ $prompt = y ]; then
+        echo "Installing pyenv..."
+        curl https://pyenv.run | bash
+    fi
+fi
+
 for section in dotfiles; do
     echo -ne "Would you like to setup $section? (y/n): "
     read prompt
@@ -106,6 +122,3 @@ for section in dotfiles; do
 done
 
 echo -e "${CLEAR}Done!"
-
-# Generate ssh key
-ssh-keygen 

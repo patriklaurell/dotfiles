@@ -76,6 +76,17 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
     fi
 fi
 
+# Install vim-plug if it doesn't exist
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+    echo -ne "Vim-plug not found, would you like to install it? (y/n): "
+    read prompt
+    if [ $prompt = y ]; then
+        echo_yello "Installing vim-plug..."
+        curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    fi
+fi
+
 for section in dotfiles; do
     echo -ne "Would you like to setup $section? (y/n): "
     read prompt

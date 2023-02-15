@@ -57,7 +57,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+" set list listchars=tab:»·,trail:·,nbsp:·
 
 " Dont redraw when executing macros
 set lazyredraw

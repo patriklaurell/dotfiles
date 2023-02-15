@@ -3,6 +3,17 @@
 git submodule init
 git submodule update
 
+# Helper functions used for coloring output
+CLEAR="\033[0m"
+BOLD="\033[0;01m"
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+YELLOW="\033[0;33m"
+echo_red()    { echo -e    "${RED}${1}${CLEAR}"; }
+echo_green()  { echo -e  "${GREEN}${1}${CLEAR}"; }
+echo_yellow() { echo -e "${YELLOW}${1}${CLEAR}"; }
+echo_bold()   { echo -e   "${BOLD}${1}${CLEAR}"; }
+
 dotfiles () {
     ##########
     # This function is based on a blogpost by Michael Smalley
@@ -35,32 +46,22 @@ dotfiles () {
     # echo "...done"
 
     # move any existing dotfiles (excluding symlinks) in homedir to dotfiles_old directory, then create symlinks
-    RED="\e[0;31m"
-    YELLOW="\e[0;33m"
-    GREEN="\e[0;32m"
-
     for file in $files; do
         if [ -e ~/$file ]; then
             if [ ! -h ~/$file ]; then
-                echo -e "${RED}Collision: Moving existing ~/${file:2} to $backup"
+                echo_red "Collision: Moving existing ~${file:2} to $backup"
                 mv ~/$file $backup
             else
-                echo -e "${YELLOW}Symlink already existed at ~/${file:2}"
+                echo_yellow "Symlink already existed at ~${file:2}"
             fi
 	fi
         if [ ! -h ~/$file ]; then
-            echo -e "${GREEN}Creating symlink to ${file:2}"
+            echo_green "Creating symlink to ${file:2}"
             ln -si $dir/$file ~/$file
         fi
     done
 
     cd $cwd
-
-    # Set certain permissions on the folders leading down to .ssh to prevent SSH issues
-    chmod 744 .
-    chmod 744 home
-    chmod 744 home/.ssh
-    chmod 600 home/.ssh/authorized_keys
 }
 
 echo Welcome to my linux config setup script!
@@ -73,6 +74,4 @@ for section in dotfiles; do
     fi
 done
 
-NC="\e[0m"  # No/reset color
-
-echo -e "${NC}Done!"
+echo -e "${CLEAR}Done!"

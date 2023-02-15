@@ -1,0 +1,19 @@
+*.swp
+
+# Ignore the backup dir
+backup/
+
+# Config dir can contain sensitive data
+.config/*
+
+# A lot of scripts and bins are stored in .bin, not all should
+# be commited and all should be carefully hand-picked.
+.bin
+
+# GnuPG, obviously
+.gnupg
+
+# Uncertain which files here are okay to upload
+.atom
+
+*.spl

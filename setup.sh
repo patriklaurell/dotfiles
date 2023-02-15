@@ -66,6 +66,37 @@ dotfiles () {
 
 echo Welcome to my linux config setup script!
 
+# Install tpm if it doesn't exist
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    echo -ne "Tmux plugin manager not found, would you like to install it? (y/n): "
+    read prompt
+    if [ $prompt = y ]; then   
+        echo "Installing tpm..."
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    fi
+fi
+
+# Install vim-plug if it doesn't exist
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+    echo -ne "Vim-plug not found, would you like to install it? (y/n): "
+    read prompt
+    if [ $prompt = y ]; then
+        echo "Installing vim-plug..."
+        curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    fi
+fi
+
+# Install oh-my-zsh if it doesn't exist
+if [ ! -d ~/.oh-my-zsh ]; then
+    echo -ne "Oh-my-zsh not found, would you like to install it? (y/n): "
+    read prompt
+    if [ $prompt = y ]; then
+        echo "Installing oh-my-zsh..."
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    fi
+fi
+
 for section in dotfiles; do
     echo -ne "Would you like to setup $section? (y/n): "
     read prompt
@@ -75,3 +106,6 @@ for section in dotfiles; do
 done
 
 echo -e "${CLEAR}Done!"
+
+# Generate ssh key
+ssh-keygen 

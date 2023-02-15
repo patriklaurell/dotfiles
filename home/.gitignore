@@ -9,6 +9,9 @@ backup/
 # Config dir can contain sensitive data
 .config/*
 
+# Ignore htop config
+.config/htop/
+
 # A lot of scripts and bins are stored in .bin, not all should
 # be commited and all should be carefully hand-picked.
 .bin

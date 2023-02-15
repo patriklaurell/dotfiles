@@ -1,4 +1,7 @@
+# Vim stuff
 *.swp
+.vim/.netrwhist
+.vim/plugged
 
 # Ignore the backup dir
 backup/

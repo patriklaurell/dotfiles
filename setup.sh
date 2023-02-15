@@ -66,6 +66,16 @@ dotfiles () {
 
 echo Welcome to my linux config setup script!
 
+# Install tpm if it doesn't exist
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    echo -ne "Tmux plugin manager not found, would you like to install it? (y/n): "
+    read prompt
+    if [ $prompt = y ]; then   
+        echo_yello "Installing tpm..."
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    fi
+fi
+
 for section in dotfiles; do
     echo -ne "Would you like to setup $section? (y/n): "
     read prompt

@@ -150,6 +150,8 @@ alias ta="tmux attach"
 # Osmosisd aliases
 alias oqtx="osmosisd query tx --type=hash"
 
+# Misc aliases
+alias whatsmyip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Go setup
 export GOPATH=~/go

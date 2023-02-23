@@ -48,6 +48,9 @@ set backspace=indent,eol,start
 " Enable line numbering
 set number
 
+" Enable mouse mode
+set mouse=a
+
 " Buffer is hidden instead of closed when new buffer is opened
 set hidden
 

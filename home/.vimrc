@@ -138,8 +138,6 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-" Set ctrl-d to delete in insert mode
-inoremap <C-d> <delete>
 
 " Navigate splits using Ctrl-h,j,k,l
 nnoremap <C-j> <C-w>j

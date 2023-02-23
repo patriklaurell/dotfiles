@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'prettier/vim-prettier'
+Plug 'github/copilot.vim'
 
 " Colorschemes and syntax tools
 Plug 'tomasr/molokai'

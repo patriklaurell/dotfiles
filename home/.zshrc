@@ -77,6 +77,7 @@ plugins=(
   git
   pip
   zsh-autosuggestions
+  autoenv
 )
 
 source $ZSH/oh-my-zsh.sh
